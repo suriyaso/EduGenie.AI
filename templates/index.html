@@ -1,0 +1,69 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGenie - AI Learning Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="hero">
+            <div class="logo">🎓 EduGenie</div>
+            <h1>Your AI Learning Assistant</h1>
+            <p>
+                Learn smarter with AI. Ask questions, explain concepts,
+                summarize text, generate quizzes, and build learning paths.
+            </p>
+        </header>
+
+        <main class="main-card">
+            <div class="form-group">
+                <label for="task">Choose a learning task</label>
+                <select id="task">
+                    <option value="qa">Ask a Question</option>
+                    <option value="explain">Explain a Concept</option>
+                    <option value="summarize">Summarize Text</option>
+                    <option value="quiz">Generate Quiz</option>
+                    <option value="learn/recommendations">Learning Path</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="level">Learning Level</label>
+                <select id="level">
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="userInput">Your Question / Topic / Text</label>
+                <textarea id="userInput" placeholder="Example: Explain photosynthesis in simple words..."></textarea>
+            </div>
+
+            <button id="submitButton" onclick="submitTask()">✨ Generate Response</button>
+
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <span>EduGenie is thinking...</span>
+            </div>
+
+            <section class="result-section">
+                <h2>AI Result</h2>
+                <div id="result" class="result">Your AI-generated response will appear here.</div>
+            </section>
+        </main>
+
+        <footer>
+            <p>EduGenie • Powered by Google Gemini</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
+
+```
